@@ -1,0 +1,39 @@
+.storybook-button {
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary:hover {
+  color: #66D893;
+  background-color: #393E46;
+}
+.storybook-button--primary {
+  color: #393E46;
+  background-color: #66D893;
+}
+
+.storybook-button--secondary {
+  color:#66D893;
+  background-color: #393E46;
+}
+.storybook-button--secondary:hover {
+  color: #66D893;
+  background-color: #222831;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/race-engineer/static/css/main.073c9b0a.css",
+    "main.js": "/race-engineer/static/js/main.9b7f579a.js",
+    "static/js/787.e0af6b54.chunk.js": "/race-engineer/static/js/787.e0af6b54.chunk.js",
+    "static/media/logo.svg": "/race-engineer/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/race-engineer/index.html",
+    "main.073c9b0a.css.map": "/race-engineer/static/css/main.073c9b0a.css.map",
+    "main.9b7f579a.js.map": "/race-engineer/static/js/main.9b7f579a.js.map",
+    "787.e0af6b54.chunk.js.map": "/race-engineer/static/js/787.e0af6b54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.9b7f579a.js"
+  ]
+}

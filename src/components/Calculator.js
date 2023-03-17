@@ -1,34 +1,47 @@
 import React ,{useState, useRef} from 'react'
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles';
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import {Box, Input, Checkbox, Divider, Button} from "@chakra-ui/react"
-// import { Button } from '../stories/Button';
-// import { Colors } from '../theme/colors';
-// import "../theme/styles.css"
+import { Button } from '../stories/Button';
+import { Colors } from '../theme/colors';
+import "../theme/styles.css"
 
 
 function Calculator() {
 
     const [rows,setRows] = useState([])
 
-    // const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    //     [`&.${tableCellClasses.head}`]: {
-    //       backgroundColor: theme.palette.common.black,
-    //       color: theme.palette.common.white,
-    //     },
-    //     [`&.${tableCellClasses.body}`]: {
-    //       fontSize: 14,
-    //     },
-    //   }));
+    const StyledTableCell = styled(TableCell)(({ theme }) => ({
+        [`&.${tableCellClasses.head}`]: {
+          backgroundColor: theme.palette.common.black,
+          color: theme.palette.common.white,
+        },
+        [`&.${tableCellClasses.body}`]: {
+          fontSize: 14,
+        },
+      }));
       
-    //   const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    //     '&:nth-of-type(odd)': {
-    //       backgroundColor: theme.palette.action.hover,
-    //     },
-    //     // hide last border
-    //     '&:last-child td, &:last-child th': {
-    //       border: 0,
-    //     },
-    //   }));
+      const StyledTableRow = styled(TableRow)(({ theme }) => ({
+        '&:nth-of-type(odd)': {
+          backgroundColor: theme.palette.action.hover,
+        },
+        // hide last border
+        '&:last-child td, &:last-child th': {
+          border: 0,
+        },
+      }));
       
 
     const getNumOfPits = (max,num) => {
@@ -100,9 +113,9 @@ function Calculator() {
 
 
   return (
-    // <Grid container spacing={2} backgroundColor={Colors.light} height="100vh">
-    //     <Grid item xs={12} md={4} backgroundColor={Colors.light}>
-    <>
+    <Grid container spacing={2} backgroundColor={Colors.light} height="100vh">
+        <Grid item xs={12} md={4} backgroundColor={Colors.light}>
+    
         <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
@@ -129,7 +142,7 @@ function Calculator() {
             <Box padding="30px" display="flex" flexDirection={"column"} height="100%">
                 <Box display="flex" justifyContent={"space-between"}>
                 <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Average lap time soft (sec)"
                       type="number"
@@ -142,7 +155,7 @@ function Calculator() {
                       error={props.errors.email && props.touched.email}
                     />
                     <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Longest stint (laps)"
                       type="number"
@@ -164,7 +177,7 @@ function Calculator() {
                     
                 <Box display="flex" justifyContent={"space-between"} >
 <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Average lap time medium (sec)"
                       type="number"
@@ -177,7 +190,7 @@ function Calculator() {
                       error={props.errors.email && props.touched.email}
                     />
                     <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Longest stint (laps)"
                       type="number"
@@ -198,7 +211,7 @@ function Calculator() {
                 </Box>
                 <Box display="flex" justifyContent={"space-between"} >
 <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Average lap time hard (sec)"
                       type="number"
@@ -211,7 +224,7 @@ function Calculator() {
                       error={props.errors.email && props.touched.email}
                     />
                     <Field
-                      as={Input}
+                      as={TextField}
                       color="secondary"
                       label="Longest stint (laps)"
                       type="number"
@@ -232,7 +245,7 @@ function Calculator() {
                 </Box>
                 <Divider />
                 <Field
-                      as={Input}
+                      as={TextField}
                       value={props.values.pitTime}
                       color="secondary"
                       label="Average pit delay (sec)"
@@ -246,7 +259,7 @@ function Calculator() {
                       error={props.errors.email && props.touched.email}
                     />
                     <Field
-                      as={Input}
+                      as={TextField}
                       value={props.values.totalLaps}
                       color="secondary"
                       label="Total number of race laps"
@@ -286,10 +299,10 @@ function Calculator() {
         );
       }}
     </Formik>
-        {/* </Grid>
-        <Grid item xs={12} md={8} backgroundColor={Colors.darkGrey} display="flex" flexDirection={"column"} justifyContent={"center"} > */}
+        </Grid>
+        <Grid item xs={12} md={8} backgroundColor={Colors.darkGrey} display="flex" flexDirection={"column"} justifyContent={"center"} > 
         
-       {/* {rows.length>0 ?
+       {rows.length>0 ?
        <TableContainer component={Paper}>
        <Table sx={{ minWidth: 650 }} aria-label="customized table">
          <TableHead >
@@ -327,10 +340,10 @@ function Calculator() {
       </TableContainer>
       :
       <Typography variant="h6" color={Colors.light} className='font-link' > Fill in the form and click Calculate</Typography>
-      } */}
+      }
    
-        </>
-    // </Grid>
+        </Grid>
+    </Grid>
     
 
     )
